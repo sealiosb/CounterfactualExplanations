@@ -1,17 +1,18 @@
+import dice_ml
+import pandas as pd
+from dice_ml.utils import helpers  # Utility functions
 from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-import pandas as pd
-
-import dice_ml
-from dice_ml.utils import helpers  # Utility functions
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 # Step 1: Load dataset
 data_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data"
 columns = ["Status", "Duration", "CreditHistory", "Purpose", "CreditAmount", "Savings", "Employment", "InstallmentRate", "PersonalStatus", "OtherDebtors", "Residence", "Property", "Age", "OtherInstallment", "Housing", "ExistingCredits", "Job", "NumLiable", "Telephone", "ForeignWorker", "Target"]
 dataset = pd.read_csv(data_url, delim_whitespace=True, names=columns)
+
+
 
 dataset.head()
 
@@ -38,14 +39,16 @@ clf = Pipeline(steps=[('preprocessor', transformations),
 
 model = clf.fit(x_train, y_train)
 
-print("IF THIS IS THE LAST THING PRINTED, THEN GOD HELP US ALL")
+
 m = dice_ml.Model(model=model, backend="sklearn")
 
 exp = dice_ml.Dice(d, m, method="random")
 
-query_instance = x_train[1:2]
+instance_index = dataset[dataset["Target"] == 2].index[0]
+query_instance = x_test.loc[[instance_index]]
+#query_instance = x_train[1:2]
 cf = exp.generate_counterfactuals(query_instance, total_CFs=10, desired_range=None,
-                                  desired_class=1,
+                                  desired_class="opposite",
                                   permitted_range=None, features_to_vary="all")
 
 # WHY DOESNT THIS WORK FOR ME
@@ -72,6 +75,7 @@ print(cobj.summary_importance)
 pd.set_option('display.max_columns', None)
 cf.visualize_as_dataframe(show_only_changes=True)
 cf.to_json()
+
 print("Debugging below")
 print(model.predict(x_test[0:5]))
 print(test_dataset.loc[x_test.index, "Target"])
