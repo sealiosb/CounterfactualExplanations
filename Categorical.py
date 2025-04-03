@@ -46,22 +46,10 @@ exp = dice_ml.Dice(d, m, method="random")
 
 instance_index = dataset[dataset["Target"] == 2].index[0]
 query_instance = x_test.loc[[instance_index]]
-#query_instance = x_train[1:2]
 cf = exp.generate_counterfactuals(query_instance, total_CFs=10, desired_range=None,
                                   desired_class="opposite",
                                   permitted_range=None, features_to_vary="all")
 
-# WHY DOESNT THIS WORK FOR ME
-#x_test_2 = x_test[test_dataset["Target"] == 2].head(1)
-
-
-# Generate counterfactuals targeting 1 (THIS DOES NOT WORK)
-#cf = exp.generate_counterfactuals(
-#    x_test,
-#    total_CFs=3,
-#    desired_class=1,
-#    features_to_vary=[col for col in x_test.columns if col != "Purpose"]
-#)
 print("Feature importance below")
 print("Local")
 imp = exp.local_feature_importance(query_instance, cf_examples_list=cf.cf_examples_list)
