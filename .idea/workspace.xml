@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bd65641-3e52-434d-ab4e-fe0660c3d158" name="Changes" comment="Fifth Commit, Introduction of TensorFlow example">
+      <change afterPath="$PROJECT_DIR$/statlog+german+credit+data/Index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statlog+german+credit+data/german.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statlog+german+credit+data/german.data-numeric" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statlog+german+credit+data/german.doc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Categorical.py" beforeDir="false" afterPath="$PROJECT_DIR$/Categorical.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TensorFlow.py" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlow.py" afterDir="false" />
@@ -100,7 +104,7 @@
       <workItem from="1742343449677" duration="1064000" />
       <workItem from="1743694490879" duration="2431000" />
       <workItem from="1743697066285" duration="83000" />
-      <workItem from="1743697166792" duration="462000" />
+      <workItem from="1743697166792" duration="9948000" />
     </task>
     <task id="LOCAL-00001" summary="Changing class names, third commit">
       <option name="closed" value="true" />
@@ -134,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743695169903</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fifth Commit, Introduction of TensorFlow example">
+      <option name="closed" value="true" />
+      <created>1743697761807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743697761807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,8 +173,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CounterfactualExplanations$Counterfactuals.coverage" NAME="Counterfactuals Coverage Results" MODIFIED="1742213023556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/lib/python3.9" />
     <SUITE FILE_PATH="coverage/CounterfactualExplanations$Numerical.coverage" NAME="Numerical Coverage Results" MODIFIED="1742221402475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/lib/python3.9" />
-    <SUITE FILE_PATH="coverage/CounterfactualExplanations$TensorFlow.coverage" NAME="TensorFlow Coverage Results" MODIFIED="1743697495527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CounterfactualExplanations$TensorFlow.coverage" NAME="TensorFlow Coverage Results" MODIFIED="1744203916642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CounterfactualExplanations$Main.coverage" NAME="Main Coverage Results" MODIFIED="1742212286635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/lib/python3.9" />
-    <SUITE FILE_PATH="coverage/CounterfactualExplanations$Categorical.coverage" NAME="Categorical Coverage Results" MODIFIED="1743694956756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/lib/python3.9" />
+    <SUITE FILE_PATH="coverage/CounterfactualExplanations$Categorical.coverage" NAME="Categorical Coverage Results" MODIFIED="1744200735839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

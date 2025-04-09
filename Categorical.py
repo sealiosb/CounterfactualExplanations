@@ -8,9 +8,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 # Step 1: Load dataset
-data_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data"
+data_path = "/Users/owen/PycharmProjects/CounterfactualExplanations/statlog+german+credit+data/german.data"
 columns = ["Status", "Duration", "CreditHistory", "Purpose", "CreditAmount", "Savings", "Employment", "InstallmentRate", "PersonalStatus", "OtherDebtors", "Residence", "Property", "Age", "OtherInstallment", "Housing", "ExistingCredits", "Job", "NumLiable", "Telephone", "ForeignWorker", "Target"]
-dataset = pd.read_csv(data_url, delim_whitespace=True, names=columns)
+dataset = pd.read_csv(data_path, delim_whitespace=True, names=columns)
 
 
 
