@@ -5,12 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
-data_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data"
-columns = ["Status", "Duration", "CreditHistory", "Purpose", "CreditAmount", "Savings", "Employment",
-           "InstallmentRate", "PersonalStatus", "OtherDebtors", "Residence", "Property", "Age",
-           "OtherInstallment", "Housing", "ExistingCredits", "Job", "NumLiable", "Telephone",
-           "ForeignWorker", "Target"]
-df = pd.read_csv(data_url, delim_whitespace=True, names=columns)
+data_path = "statlog+german+credit+data/german.data"
+columns = ["Status", "Duration", "CreditHistory", "Purpose", "CreditAmount", "Savings", "Employment", "InstallmentRate", "PersonalStatus", "OtherDebtors", "Residence", "Property", "Age", "OtherInstallment", "Housing", "ExistingCredits", "Job", "NumLiable", "Telephone", "ForeignWorker", "Target"]
+dataset = pd.read_csv(data_path, delim_whitespace=True, names=columns)
 
 
 label_encoders = {}

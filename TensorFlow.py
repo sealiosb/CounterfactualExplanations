@@ -8,7 +8,7 @@ from tensorflow.keras.models import Sequential
 import dice_ml
 
 # Load the dataset
-data_path = '/Users/owen/PycharmProjects/CounterfactualExplanations/statlog+german+credit+data/german.data'
+data_path = "statlog+german+credit+data/german.data"
 columns = ["Status", "Duration", "CreditHistory", "Purpose", "CreditAmount", "Savings", "Employment",
            "InstallmentRate", "PersonalStatus", "OtherDebtors", "Residence", "Property", "Age",
            "OtherInstallment", "Housing", "ExistingCredits", "Job", "NumLiable", "Telephone",
