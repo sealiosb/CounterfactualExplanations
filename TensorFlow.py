@@ -93,11 +93,11 @@ m = dice_ml.Model(model=model, backend="TF2")
 exp = dice_ml.Dice(d, m, method="random")
 
 # Select a valid instance for counterfactual generation
-instance_index = dataset[dataset[target_column] == 1].index[0]  # Select the first instance with target = 1
-query_instance = pd.DataFrame([dataset.iloc[instance_index].drop(target_column)])  # Drop the target column
-query_instance_transformed = transformations.transform(query_instance)  # Transform the query instance
+instance_index = dataset[dataset[target_column] == 1].index[0]
+query_instance = pd.DataFrame([dataset.iloc[instance_index].drop(target_column)])
+query_instance_transformed = transformations.transform(query_instance)
 query_instance_transformed_dense = pd.DataFrame(
-    query_instance_transformed,  # Already a dense numpy array
+    query_instance_transformed,
     columns=transformations.get_feature_names_out()
 )
 
@@ -105,8 +105,8 @@ query_instance_transformed_dense = pd.DataFrame(
 cf = exp.generate_counterfactuals(
     query_instance_transformed_dense,
     total_CFs=10,  # Generate 10 counterfactuals
-    desired_class="opposite",  # Desired class is the opposite of the current prediction
-    features_to_vary="all"  # Allow all features to vary
+    desired_class="opposite",
+    features_to_vary="all"
 )
 
 # Visualize the counterfactuals
@@ -114,4 +114,6 @@ if cf.cf_examples_list[0].final_cfs_df.empty:
     print("No counterfactuals found. Try adjusting the parameters or model.")
 else:
     pd.set_option('display.max_columns', None)  # Display all columns in the output
-    print(cf.visualize_as_dataframe(show_only_changes=True))  # Show only the changes in counterfactuals
+    print(cf.visualize_as_dataframe(show_only_changes=False))
+    print("Changes only below")
+    print(cf.visualize_as_dataframe(show_only_changes=True))
