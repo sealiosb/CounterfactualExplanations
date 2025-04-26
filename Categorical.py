@@ -45,8 +45,8 @@ m = dice_ml.Model(model=model, backend="sklearn")
 
 exp = dice_ml.Dice(d, m, method="random")
 
-instance_index = dataset[dataset["Target"] == 2].index[0]
-#instance_index = np.random.choice(dataset[dataset["Target"] == 2].index)
+#instance_index = dataset[dataset["Target"] == 2].index[0]
+instance_index = np.random.choice(dataset[dataset["Target"] == 2].index)
 
 query_instance = x_test.loc[[instance_index]]
 cf = exp.generate_counterfactuals(query_instance, total_CFs=10, desired_range=None,
