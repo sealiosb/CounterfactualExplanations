@@ -1,3 +1,7 @@
+#https://github.com/sealiosb/CounterfactualExplanations
+#If issues are found with the code, please report them to the author of the code.
+#This code generates counterfactual explanations for a SKlearn model using the DiCE library.
+
 import dice_ml
 import pandas as pd
 import numpy as np

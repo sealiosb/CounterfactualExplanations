@@ -1,3 +1,8 @@
+#https://github.com/sealiosb/CounterfactualExplanations
+#If issues are found with the code, please report them to the author of the code.
+# This code generates counterfactual explanations for a TensorFlow model using the DiCE library.
+
+
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split

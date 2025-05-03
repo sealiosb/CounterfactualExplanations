@@ -1,3 +1,7 @@
+#https://github.com/sealiosb/CounterfactualExplanations
+#If issues are found with the code, please report them to the author of the code.
+#Prototype code to generate counterfactuals using DiCE
+
 import pandas as pd
 import dice_ml
 from dice_ml.utils import helpers  # Utility functions
